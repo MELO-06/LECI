@@ -1,0 +1,161 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Melo/Desktop/escola/LSD/aula2/simulation/qsim
+T_opt
+!s110 1739871712
+VQ^RK[ALhX_Ci0QDb0:F1d0
+04 16 9 work scan_vhd_vec_tst scan_arch 1
+=1-6c2f80944e31-67b455e0-109-d5c
+!s124 OEM10U3 
+o-quiet -auto_acc_if_foreign -work work -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Ehard_block
+Z1 w1739871711
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 gn]m8U<PzXZH32IDQ4:hj3
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 cSe5`^NYM;IRV3WNS^Q7a2
+!i122 4
+R0
+Z8 8scan.vho
+Z9 Fscan.vho
+l0
+L35 1
+VB]0;STalBkCB1_B4BXQDW2
+!s100 >mXi5[`cD`bFC`UBKA<om3
+Z10 OL;C;2021.2;73
+32
+Z11 !s110 1739871711
+!i10b 1
+Z12 !s108 1739871711.000000
+Z13 !s90 -work|work|scan.vho|
+Z14 !s107 scan.vho|
+!i113 0
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 B]0;STalBkCB1_B4BXQDW2
+!i122 4
+l65
+L51 20
+Via>5o7W??azG@W@@eFOTF0
+!s100 [5;Wd8QGQ>@2NGoJ1I]Y43
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Escan
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+!i122 4
+R0
+R8
+R9
+l0
+L78 1
+VJJ?;9NJVGEWCze]j9S34W1
+!s100 o<e[LH;9h4^3Nj=[QmVeP0
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 4 scan 0 22 JJ?;9NJVGEWCze]j9S34W1
+!i122 4
+l115
+L91 88
+VlHU3Oj_95D]k`L4Io@VnC0
+!s100 D4KP@f`f?d^C7`KDbE`nC1
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Escan_vhd_vec_tst
+Z17 w1739871710
+R5
+R6
+!i122 5
+R0
+Z18 8Waveform.vwf.vht
+Z19 FWaveform.vwf.vht
+l0
+L32 1
+VTOX5V<ZcHm:J[c4^GO4OS2
+!s100 P91[OIGX=kjS16R@1:be70
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|Waveform.vwf.vht|
+Z21 !s107 Waveform.vwf.vht|
+!i113 0
+R15
+R16
+Ascan_arch
+R5
+R6
+DEx4 work 16 scan_vhd_vec_tst 0 22 TOX5V<ZcHm:J[c4^GO4OS2
+!i122 5
+l45
+L34 49
+VB5H_?7<?LE]XDTHeKdgm=0
+!s100 4kaVTiGX8:j`9aFelAk``1
+R10
+32
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 0
+R15
+R16

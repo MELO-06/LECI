@@ -1,0 +1,12 @@
+LIBRARY ieee ; 
+USE ieee.std_logic_1164.all ; 
+
+ENTITY xorVHDLProject IS
+	PORT (a, b : IN STD_LOGIC;
+		f: OUT STD_LOGIC ) ;
+END xorVHDLProject ;
+
+ARCHITECTURE LogicFunction OF xorVHDLProject IS 
+BEGIN 
+	f <= (a AND NOT b) or (not a and b);
+end LogicFunction	;

@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -5.772
+TNS   : -148.788
+
+Type  : Slow 1200mV 85C Model Setup 'lpm_counter:inst7|cntr_rpj:auto_generated|counter_reg_bit[0]'
+Slack : -2.267
+TNS   : -2.267
+
+Type  : Slow 1200mV 85C Model Setup 'inst'
+Slack : -0.352
+TNS   : -0.352
+
+Type  : Slow 1200mV 85C Model Setup 'inst1'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -1.803
+TNS   : -23.745
+
+Type  : Slow 1200mV 85C Model Hold 'inst1'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'inst'
+Slack : 0.558
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'lpm_counter:inst7|cntr_rpj:auto_generated|counter_reg_bit[0]'
+Slack : 0.707
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -36.410
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'lpm_counter:inst7|cntr_rpj:auto_generated|counter_reg_bit[0]'
+Slack : -1.285
+TNS   : -7.105
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inst1'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -5.050
+TNS   : -130.136
+
+Type  : Slow 1200mV 0C Model Setup 'lpm_counter:inst7|cntr_rpj:auto_generated|counter_reg_bit[0]'
+Slack : -2.111
+TNS   : -2.111
+
+Type  : Slow 1200mV 0C Model Setup 'inst'
+Slack : -0.293
+TNS   : -0.293
+
+Type  : Slow 1200mV 0C Model Setup 'inst1'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -1.672
+TNS   : -23.055
+
+Type  : Slow 1200mV 0C Model Hold 'inst1'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'inst'
+Slack : 0.532
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'lpm_counter:inst7|cntr_rpj:auto_generated|counter_reg_bit[0]'
+Slack : 0.766
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -36.410
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'lpm_counter:inst7|cntr_rpj:auto_generated|counter_reg_bit[0]'
+Slack : -1.285
+TNS   : -5.917
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inst1'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -2.440
+TNS   : -62.540
+
+Type  : Fast 1200mV 0C Model Setup 'lpm_counter:inst7|cntr_rpj:auto_generated|counter_reg_bit[0]'
+Slack : -0.895
+TNS   : -0.895
+
+Type  : Fast 1200mV 0C Model Setup 'inst'
+Slack : 0.125
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'inst1'
+Slack : 0.624
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.994
+TNS   : -13.426
+
+Type  : Fast 1200mV 0C Model Hold 'inst1'
+Slack : 0.206
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'inst'
+Slack : 0.223
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'lpm_counter:inst7|cntr_rpj:auto_generated|counter_reg_bit[0]'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -29.042
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'lpm_counter:inst7|cntr_rpj:auto_generated|counter_reg_bit[0]'
+Slack : -1.000
+TNS   : -2.705
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inst1'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

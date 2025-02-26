@@ -1,0 +1,118 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/Melo/Desktop/escola/ISD/treino quartus/DecoderDemo/simulation/qsim
+T_opt
+Z2 !s110 1732630723
+V[lT_=8i;OVFBPYoGEFoER0
+04 23 16 work decoderdemo_vhd_vec_tst decoderdemo_arch 1
+=1-6c2f80944e31-6745d8c3-1c2-495c
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Edecoderdemo
+Z3 w1732630722
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 gn]m8U<PzXZH32IDQ4:hj3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z9 DPx10 cycloneive 21 cycloneive_components 0 22 cSe5`^NYM;IRV3WNS^Q7a2
+!i122 12
+R1
+Z10 8DecoderDemo.vho
+Z11 FDecoderDemo.vho
+l0
+L35 1
+VF_I`JIcFTeKVUYB?ijmCo0
+!s100 7EfP`>6IiBkJAFI=dIzWG0
+Z12 OL;C;2021.2;73
+32
+R2
+!i10b 1
+Z13 !s108 1732630723.000000
+Z14 !s90 -work|work|DecoderDemo.vho|
+Z15 !s107 DecoderDemo.vho|
+!i113 0
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 11 decoderdemo 0 22 F_I`JIcFTeKVUYB?ijmCo0
+!i122 12
+l75
+L48 133
+VJnSQC6Qdi5]HVO[a31`cF1
+!s100 ZH]cRl1FP>WRY@>gi?PH`1
+R12
+32
+R2
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Edecoderdemo_vhd_vec_tst
+Z18 w1732630721
+R7
+R8
+!i122 13
+R1
+Z19 8Waveform1.vwf.vht
+Z20 FWaveform1.vwf.vht
+l0
+L32 1
+Vd9iUlR6kHF^?PaoACbXf03
+!s100 8@I99EZD:dO:9]SNh<aJ93
+R12
+32
+R2
+!i10b 1
+R13
+Z21 !s90 -work|work|Waveform1.vwf.vht|
+Z22 !s107 Waveform1.vwf.vht|
+!i113 0
+R16
+R17
+Adecoderdemo_arch
+R7
+R8
+DEx4 work 23 decoderdemo_vhd_vec_tst 0 22 d9iUlR6kHF^?PaoACbXf03
+!i122 13
+l57
+L34 65
+VPLH5OK[a7MBn39nR?[bZ92
+!s100 MOCdaM>3hAAIO>KL@oKS:3
+R12
+32
+R2
+!i10b 1
+R13
+R21
+R22
+!i113 0
+R16
+R17

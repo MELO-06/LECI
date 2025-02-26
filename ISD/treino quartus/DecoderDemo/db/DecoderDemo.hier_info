@@ -1,0 +1,31 @@
+|DecoderDemo
+y0 <= Dec2_4:inst.y0
+y1 <= Dec2_4:inst.y2
+y2 <= Dec2_4:inst.y1
+y3 <= Dec2_4:inst.y3
+x0 => ~NO_FANOUT~
+x1 => ~NO_FANOUT~
+e1 => ~NO_FANOUT~
+e0_l => ~NO_FANOUT~
+
+
+|DecoderDemo|Dec2_4:inst
+y0 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+e0_l => inst3.IN0
+e1 => inst4.IN1
+e1 => inst5.IN1
+e1 => inst6.IN0
+e1 => inst7.IN0
+x1 => inst4.IN2
+x1 => inst5.IN3
+x1 => inst6.IN2
+x1 => inst7.IN2
+x0 => inst4.IN3
+x0 => inst5.IN2
+x0 => inst6.IN3
+x0 => inst7.IN3
+y2 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+y3 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+

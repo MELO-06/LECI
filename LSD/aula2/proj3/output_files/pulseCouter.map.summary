@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Feb 18 11:36:47 2025
+Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Revision Name : pulseCouter
+Top-level Entity Name : pulseCouter
+Family : Cyclone IV E
+Total logic elements : 40
+    Total combinational functions : 40
+    Dedicated logic registers : 29
+Total registers : 29
+Total pins : 4
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
