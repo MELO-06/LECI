@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
 
--- DATE "02/27/2025 16:11:44"
+-- DATE "03/11/2025 09:18:32"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -77,12 +77,16 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY 	DisplayDemo IS
     PORT (
+	pin_name1 : OUT std_logic;
+	pin_name2 : OUT std_logic;
 	HEX0 : OUT std_logic_vector(6 DOWNTO 0);
 	SW : IN std_logic_vector(3 DOWNTO 0)
 	);
 END DisplayDemo;
 
 -- Design Ports Information
+-- pin_name1	=>  Location: PIN_AB18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- pin_name2	=>  Location: PIN_Y16,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- HEX0[6]	=>  Location: PIN_H22,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- HEX0[5]	=>  Location: PIN_J22,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- HEX0[4]	=>  Location: PIN_L25,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -106,8 +110,12 @@ SIGNAL devpor : std_logic := '1';
 SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
+SIGNAL ww_pin_name1 : std_logic;
+SIGNAL ww_pin_name2 : std_logic;
 SIGNAL ww_HEX0 : std_logic_vector(6 DOWNTO 0);
 SIGNAL ww_SW : std_logic_vector(3 DOWNTO 0);
+SIGNAL \pin_name1~output_o\ : std_logic;
+SIGNAL \pin_name2~output_o\ : std_logic;
 SIGNAL \HEX0[6]~output_o\ : std_logic;
 SIGNAL \HEX0[5]~output_o\ : std_logic;
 SIGNAL \HEX0[4]~output_o\ : std_logic;
@@ -137,6 +145,8 @@ END COMPONENT;
 
 BEGIN
 
+pin_name1 <= ww_pin_name1;
+pin_name2 <= ww_pin_name2;
 HEX0 <= ww_HEX0;
 ww_SW <= SW;
 ww_devoe <= devoe;
@@ -148,6 +158,30 @@ PORT MAP (
 	devoe => ww_devoe,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor);
+
+-- Location: IOOBUF_X98_Y0_N16
+\pin_name1~output\ : cycloneive_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \pin_name1~output_o\);
+
+-- Location: IOOBUF_X96_Y0_N16
+\pin_name2~output\ : cycloneive_io_obuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	open_drain_output => "false")
+-- pragma translate_on
+PORT MAP (
+	i => GND,
+	devoe => ww_devoe,
+	o => \pin_name2~output_o\);
 
 -- Location: IOOBUF_X115_Y69_N2
 \HEX0[6]~output\ : cycloneive_io_obuf
@@ -395,6 +429,10 @@ PORT MAP (
 	datac => \SW[3]~input_o\,
 	datad => \SW[0]~input_o\,
 	combout => \inst|decOut_n[0]~6_combout\);
+
+ww_pin_name1 <= \pin_name1~output_o\;
+
+ww_pin_name2 <= \pin_name2~output_o\;
 
 ww_HEX0(6) <= \HEX0[6]~output_o\;
 

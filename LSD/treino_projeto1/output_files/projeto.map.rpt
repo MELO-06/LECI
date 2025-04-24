@@ -1,0 +1,254 @@
+Analysis & Synthesis report for projeto
+Mon Apr  7 17:15:52 2025
+Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Parameter Settings for User Entity Instance: FreqDivider:inst6
+  6. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Mon Apr  7 17:15:52 2025              ;
+; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Revision Name                      ; projeto                                        ;
+; Top-level Entity Name              ; projeto                                        ;
+; Family                             ; Cyclone IV E                                   ;
+; Total logic elements               ; N/A until Partition Merge                      ;
+;     Total combinational functions  ; N/A until Partition Merge                      ;
+;     Dedicated logic registers      ; N/A until Partition Merge                      ;
+; Total registers                    ; N/A until Partition Merge                      ;
+; Total pins                         ; N/A until Partition Merge                      ;
+; Total virtual pins                 ; N/A until Partition Merge                      ;
+; Total memory bits                  ; N/A until Partition Merge                      ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
+; Total PLLs                         ; N/A until Partition Merge                      ;
++------------------------------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; projeto            ; projeto            ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FreqDivider:inst6 ;
++----------------+----------+------------------------------------+
+; Parameter Name ; Value    ; Type                               ;
++----------------+----------+------------------------------------+
+; divfactor      ; 12500000 ; Signed Integer                     ;
++----------------+----------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+    Info: Processing started: Mon Apr  7 17:15:45 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto -c projeto
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file bin7segdecoder.vhd
+    Info (12022): Found design unit 1: Bin7SegDecoder-RTL File: C:/Users/Melo/Desktop/escola/LSD/projeto1/Bin7SegDecoder.vhd Line: 10
+    Info (12023): Found entity 1: Bin7SegDecoder File: C:/Users/Melo/Desktop/escola/LSD/projeto1/Bin7SegDecoder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file programselector.vhd
+    Info (12022): Found design unit 1: ProgramSelector-Behavioral File: C:/Users/Melo/Desktop/escola/LSD/projeto1/ProgramSelector.vhd Line: 14
+    Info (12023): Found entity 1: ProgramSelector File: C:/Users/Melo/Desktop/escola/LSD/projeto1/ProgramSelector.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file leddisplayer.vhd
+    Info (12022): Found design unit 1: LedDisplayer-Behavioral File: C:/Users/Melo/Desktop/escola/LSD/projeto1/LedDisplayer.vhd Line: 12
+    Info (12023): Found entity 1: LedDisplayer File: C:/Users/Melo/Desktop/escola/LSD/projeto1/LedDisplayer.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file speedselect.vhd
+    Info (12022): Found design unit 1: SpeedSelect-Behavioral File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 13
+    Info (12023): Found entity 1: SpeedSelect File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
+    Info (12022): Found design unit 1: Counter-Behavioral File: C:/Users/Melo/Desktop/escola/LSD/projeto1/Counter.vhd Line: 14
+    Info (12023): Found entity 1: Counter File: C:/Users/Melo/Desktop/escola/LSD/projeto1/Counter.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hextodec4bit.vhd
+    Info (12022): Found design unit 1: HexToDec4Bit-Behavioral File: C:/Users/Melo/Desktop/escola/LSD/projeto1/HexToDec4Bit.vhd Line: 14
+    Info (12023): Found entity 1: HexToDec4Bit File: C:/Users/Melo/Desktop/escola/LSD/projeto1/HexToDec4Bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file freqdivider.vhd
+    Info (12022): Found design unit 1: FreqDivider-Behavioral File: C:/Users/Melo/Desktop/escola/LSD/projeto1/FreqDivider.vhd Line: 15
+    Info (12023): Found entity 1: FreqDivider File: C:/Users/Melo/Desktop/escola/LSD/projeto1/FreqDivider.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
+    Info (12022): Found design unit 1: top_level-Behavioral File: C:/Users/Melo/Desktop/escola/LSD/projeto1/top_level.vhd Line: 12
+    Info (12023): Found entity 1: top_level File: C:/Users/Melo/Desktop/escola/LSD/projeto1/top_level.vhd Line: 4
+Warning (12125): Using design file projeto.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: projeto
+Info (12127): Elaborating entity "projeto" for the top level hierarchy
+Info (12128): Elaborating entity "LedDisplayer" for hierarchy "LedDisplayer:inst5"
+Info (12128): Elaborating entity "ProgramSelector" for hierarchy "ProgramSelector:inst8"
+Info (12128): Elaborating entity "Bin7SegDecoder" for hierarchy "Bin7SegDecoder:inst"
+Info (12128): Elaborating entity "SpeedSelect" for hierarchy "SpeedSelect:inst4"
+Warning (10492): VHDL Process Statement warning at SpeedSelect.vhd(22): signal "current_speed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 22
+Warning (10631): VHDL Process Statement warning at SpeedSelect.vhd(16): inferring latch(es) for signal or variable "current_speed", which holds its previous value in one or more paths through the process File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[0]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[1]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[2]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[3]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[4]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[5]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[6]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[7]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[8]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[9]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[10]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[11]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[12]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[13]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[14]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[15]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[16]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[17]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[18]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[19]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[20]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[21]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[22]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[23]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[24]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[25]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[26]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[27]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[28]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[29]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (10041): Inferred latch for "current_speed[30]" at SpeedSelect.vhd(16) File: C:/Users/Melo/Desktop/escola/LSD/projeto1/SpeedSelect.vhd Line: 16
+Info (12128): Elaborating entity "FreqDivider" for hierarchy "FreqDivider:inst6"
+Error (12014): Net "gdfx_temp0[3]", which fans out to "LEDG[3]", cannot be assigned more than one value
+    Error (12015): Net is fed by "LedDisplayer:inst5|ledOut[14]" File: C:/Users/Melo/Desktop/escola/LSD/projeto1/LedDisplayer.vhd Line: 8
+    Error (12015): Net is fed by "ProgramSelector:inst8|prog1_en" File: C:/Users/Melo/Desktop/escola/LSD/projeto1/ProgramSelector.vhd Line: 7
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 4 warnings
+    Error: Peak virtual memory: 4806 megabytes
+    Error: Processing ended: Mon Apr  7 17:15:52 2025
+    Error: Elapsed time: 00:00:07
+    Error: Total CPU time (on all processors): 00:00:15
+
+

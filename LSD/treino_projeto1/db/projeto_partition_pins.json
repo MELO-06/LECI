@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "prog1_en",
+					"strict" : false
+				},
+				{
+					"name" : "prog2_en",
+					"strict" : false
+				},
+				{
+					"name" : "prog3_en",
+					"strict" : false
+				},
+				{
+					"name" : "prog4_en",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

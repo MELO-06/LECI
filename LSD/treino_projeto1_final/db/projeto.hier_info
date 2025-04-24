@@ -1,0 +1,85 @@
+|projeto
+CLK => FreqDivider:fd_inst.clkIn
+SW[0] => ProgramSelector:ps_inst.SW[0]
+SW[1] => ProgramSelector:ps_inst.SW[1]
+LEDR[0] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[0] <= LEDG.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= LEDG.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[2] <= LEDG.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[3] <= LEDG.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto|ProgramSelector:ps_inst
+SW[0] => Mux0.IN5
+SW[0] => Mux1.IN5
+SW[0] => Mux2.IN5
+SW[0] => Mux3.IN5
+SW[1] => Mux0.IN4
+SW[1] => Mux1.IN4
+SW[1] => Mux2.IN4
+SW[1] => Mux3.IN4
+prog1_en <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+prog2_en <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+prog3_en <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+prog4_en <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projeto|FreqDivider:fd_inst
+clkIn => s_divCounter[0].CLK
+clkIn => s_divCounter[1].CLK
+clkIn => s_divCounter[2].CLK
+clkIn => s_divCounter[3].CLK
+clkIn => s_divCounter[4].CLK
+clkIn => s_divCounter[5].CLK
+clkIn => s_divCounter[6].CLK
+clkIn => s_divCounter[7].CLK
+clkIn => s_divCounter[8].CLK
+clkIn => s_divCounter[9].CLK
+clkIn => s_divCounter[10].CLK
+clkIn => s_divCounter[11].CLK
+clkIn => s_divCounter[12].CLK
+clkIn => s_divCounter[13].CLK
+clkIn => s_divCounter[14].CLK
+clkIn => s_divCounter[15].CLK
+clkIn => s_divCounter[16].CLK
+clkIn => s_divCounter[17].CLK
+clkIn => s_divCounter[18].CLK
+clkIn => s_divCounter[19].CLK
+clkIn => s_divCounter[20].CLK
+clkIn => s_divCounter[21].CLK
+clkIn => s_divCounter[22].CLK
+clkIn => s_divCounter[23].CLK
+clkIn => s_divCounter[24].CLK
+clkIn => clkOut~reg0.CLK
+en => s_divCounter[6].ENA
+en => s_divCounter[5].ENA
+en => s_divCounter[4].ENA
+en => s_divCounter[3].ENA
+en => s_divCounter[2].ENA
+en => s_divCounter[1].ENA
+en => s_divCounter[0].ENA
+en => s_divCounter[7].ENA
+en => s_divCounter[8].ENA
+en => s_divCounter[9].ENA
+en => s_divCounter[10].ENA
+en => s_divCounter[11].ENA
+en => s_divCounter[12].ENA
+en => s_divCounter[13].ENA
+en => s_divCounter[14].ENA
+en => s_divCounter[15].ENA
+en => s_divCounter[16].ENA
+en => s_divCounter[17].ENA
+en => s_divCounter[18].ENA
+en => s_divCounter[19].ENA
+en => s_divCounter[20].ENA
+en => s_divCounter[21].ENA
+en => s_divCounter[22].ENA
+en => s_divCounter[23].ENA
+en => s_divCounter[24].ENA
+en => clkOut~reg0.ENA
+clkOut <= clkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,18 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity AdderN is
+    Generic (N : integer := 8); -- Número de bits parametrizável
+    Port (
+        A   : in  STD_LOGIC_VECTOR(N-1 downto 0);
+        B   : in  STD_LOGIC_VECTOR(N-1 downto 0);
+        Sum : out STD_LOGIC_VECTOR(N downto 0)
+    );
+end AdderN;
+
+architecture Behavioral of AdderN is
+begin
+    Sum <= ('0' & A) + ('0' & B); -- Adição com extensão para acomodar o carry
+end Behavioral;

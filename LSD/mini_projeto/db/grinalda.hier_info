@@ -1,0 +1,186 @@
+|grinalda
+CLOCK_50 => blink_gen:u_blink_1hz.clk
+CLOCK_50 => blink_gen:u_blink_2hz.clk
+CLOCK_50 => clkdivider:clk_6s_period.clkIn
+SW[0] => Add0.IN4
+SW[0] => dec2_4en:dec2_4.inputs[0]
+SW[1] => Add0.IN3
+SW[1] => dec2_4en:dec2_4.inputs[1]
+LEDR[0] << LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] << LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] << LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] << LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] << LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] << LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] << LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] << LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[0] << LEDG.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] << LEDG.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[2] << LEDG.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[3] << LEDG.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[0] << bin7segdecoder:bin_7seg.decOut[0]
+HEX0[1] << bin7segdecoder:bin_7seg.decOut[1]
+HEX0[2] << bin7segdecoder:bin_7seg.decOut[2]
+HEX0[3] << bin7segdecoder:bin_7seg.decOut[3]
+HEX0[4] << bin7segdecoder:bin_7seg.decOut[4]
+HEX0[5] << bin7segdecoder:bin_7seg.decOut[5]
+HEX0[6] << bin7segdecoder:bin_7seg.decOut[6]
+
+
+|grinalda|Bin7SegDecoder:bin_7seg
+binInput[0] => Mux0.IN19
+binInput[0] => Mux1.IN19
+binInput[0] => Mux2.IN19
+binInput[0] => Mux3.IN19
+binInput[0] => Mux4.IN19
+binInput[0] => Mux5.IN19
+binInput[0] => Mux6.IN19
+binInput[1] => Mux0.IN18
+binInput[1] => Mux1.IN18
+binInput[1] => Mux2.IN18
+binInput[1] => Mux3.IN18
+binInput[1] => Mux4.IN18
+binInput[1] => Mux5.IN18
+binInput[1] => Mux6.IN18
+binInput[2] => Mux0.IN17
+binInput[2] => Mux1.IN17
+binInput[2] => Mux2.IN17
+binInput[2] => Mux3.IN17
+binInput[2] => Mux4.IN17
+binInput[2] => Mux5.IN17
+binInput[2] => Mux6.IN17
+binInput[3] => Mux0.IN16
+binInput[3] => Mux1.IN16
+binInput[3] => Mux2.IN16
+binInput[3] => Mux3.IN16
+binInput[3] => Mux4.IN16
+binInput[3] => Mux5.IN16
+binInput[3] => Mux6.IN16
+enable => decOut.OUTPUTSELECT
+enable => decOut.OUTPUTSELECT
+enable => decOut.OUTPUTSELECT
+enable => decOut.OUTPUTSELECT
+enable => decOut.OUTPUTSELECT
+enable => decOut.OUTPUTSELECT
+enable => decOut.OUTPUTSELECT
+decOut[0] <= decOut.DB_MAX_OUTPUT_PORT_TYPE
+decOut[1] <= decOut.DB_MAX_OUTPUT_PORT_TYPE
+decOut[2] <= decOut.DB_MAX_OUTPUT_PORT_TYPE
+decOut[3] <= decOut.DB_MAX_OUTPUT_PORT_TYPE
+decOut[4] <= decOut.DB_MAX_OUTPUT_PORT_TYPE
+decOut[5] <= decOut.DB_MAX_OUTPUT_PORT_TYPE
+decOut[6] <= decOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|grinalda|Dec2_4En:dec2_4
+enable => outputs.OUTPUTSELECT
+enable => outputs.OUTPUTSELECT
+enable => outputs.OUTPUTSELECT
+enable => outputs.OUTPUTSELECT
+inputs[0] => Equal0.IN1
+inputs[0] => Equal1.IN1
+inputs[0] => Equal2.IN0
+inputs[1] => Equal0.IN0
+inputs[1] => Equal1.IN0
+inputs[1] => Equal2.IN1
+outputs[0] <= outputs.DB_MAX_OUTPUT_PORT_TYPE
+outputs[1] <= outputs.DB_MAX_OUTPUT_PORT_TYPE
+outputs[2] <= outputs.DB_MAX_OUTPUT_PORT_TYPE
+outputs[3] <= outputs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|grinalda|Blink_Gen:u_blink_1hz
+clk => s_counter[0].CLK
+clk => s_counter[1].CLK
+clk => s_counter[2].CLK
+clk => s_counter[3].CLK
+clk => s_counter[4].CLK
+clk => s_counter[5].CLK
+clk => s_counter[6].CLK
+clk => s_counter[7].CLK
+clk => s_counter[8].CLK
+clk => s_counter[9].CLK
+clk => s_counter[10].CLK
+clk => s_counter[11].CLK
+clk => s_counter[12].CLK
+clk => s_counter[13].CLK
+clk => s_counter[14].CLK
+clk => s_counter[15].CLK
+clk => s_counter[16].CLK
+clk => s_counter[17].CLK
+clk => s_counter[18].CLK
+clk => s_counter[19].CLK
+clk => s_counter[20].CLK
+clk => s_counter[21].CLK
+clk => s_counter[22].CLK
+clk => s_counter[23].CLK
+clk => s_counter[24].CLK
+clk => s_counter[25].CLK
+reset => count_proc.IN1
+blink <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|grinalda|Blink_Gen:u_blink_2hz
+clk => s_counter[0].CLK
+clk => s_counter[1].CLK
+clk => s_counter[2].CLK
+clk => s_counter[3].CLK
+clk => s_counter[4].CLK
+clk => s_counter[5].CLK
+clk => s_counter[6].CLK
+clk => s_counter[7].CLK
+clk => s_counter[8].CLK
+clk => s_counter[9].CLK
+clk => s_counter[10].CLK
+clk => s_counter[11].CLK
+clk => s_counter[12].CLK
+clk => s_counter[13].CLK
+clk => s_counter[14].CLK
+clk => s_counter[15].CLK
+clk => s_counter[16].CLK
+clk => s_counter[17].CLK
+clk => s_counter[18].CLK
+clk => s_counter[19].CLK
+clk => s_counter[20].CLK
+clk => s_counter[21].CLK
+clk => s_counter[22].CLK
+clk => s_counter[23].CLK
+clk => s_counter[24].CLK
+reset => count_proc.IN1
+blink <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|grinalda|ClkDivider:clk_6s_period
+clkIn => s_divCounter[0].CLK
+clkIn => s_divCounter[1].CLK
+clkIn => s_divCounter[2].CLK
+clkIn => s_divCounter[3].CLK
+clkIn => s_divCounter[4].CLK
+clkIn => s_divCounter[5].CLK
+clkIn => s_divCounter[6].CLK
+clkIn => s_divCounter[7].CLK
+clkIn => s_divCounter[8].CLK
+clkIn => s_divCounter[9].CLK
+clkIn => s_divCounter[10].CLK
+clkIn => s_divCounter[11].CLK
+clkIn => s_divCounter[12].CLK
+clkIn => s_divCounter[13].CLK
+clkIn => s_divCounter[14].CLK
+clkIn => s_divCounter[15].CLK
+clkIn => s_divCounter[16].CLK
+clkIn => s_divCounter[17].CLK
+clkIn => s_divCounter[18].CLK
+clkIn => s_divCounter[19].CLK
+clkIn => s_divCounter[20].CLK
+clkIn => s_divCounter[21].CLK
+clkIn => s_divCounter[22].CLK
+clkIn => s_divCounter[23].CLK
+clkIn => s_divCounter[24].CLK
+clkIn => s_divCounter[25].CLK
+clkIn => s_divCounter[26].CLK
+clkIn => s_divCounter[27].CLK
+clkIn => s_divCounter[28].CLK
+clkIn => clkOut~reg0.CLK
+clkOut <= clkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

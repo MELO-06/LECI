@@ -1,0 +1,49 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity top_level is
+    port (
+        SW   : in  std_logic_vector(1 downto 0);  -- Input switches
+        LEDR : out std_logic_vector(3 downto 0);  -- Red LEDs
+        LEDG : out std_logic_vector(3 downto 0)   -- Green LEDs
+    );
+end top_level;
+
+architecture Behavioral of top_level is
+
+    -- Component declaration for programselector
+    component programselector
+        port (
+            SW    : in  std_logic_vector(1 downto 0);
+            prog1_en     : out std_logic_vector(3 downto 0);
+            prog2_en     : out std_logic_vector(3 downto 0);
+            prog3_en     : out std_logic_vector(3 downto 0);
+            prog4_en     : out std_logic_vector(3 downto 0)
+        );
+    end component;
+
+    -- Internal signals for programselector outputs
+            signal prog1_en     : out std_logic_vector(3 downto 0);
+            signal prog2_en     : out std_logic_vector(3 downto 0);
+            signal prog3_en     : out std_logic_vector(3 downto 0);
+            signal prog4_en     : out std_logic_vector(3 downto 0)
+begin
+
+    -- Instantiate the programselector
+    ps_inst: programselector
+        port map (
+            SW => SW,
+            prog1_en  => prog1_en,
+            prog2_en  => prog2_en,
+            prog3_en  => prog3_en,
+            prog4_en  => prog4_en
+        );
+
+    -- Connect the first output to both LED groups
+    LEDR <= prog1_en;
+    LEDG <= prog1_en;
+
+    -- Note: The other outputs (output1, output2, output3) are available
+    -- but not connected to anything in this design
+
+end Behavioral;

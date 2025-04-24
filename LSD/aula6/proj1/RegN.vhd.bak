@@ -1,0 +1,29 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity RegN is
+    Generic (N : integer := 8); -- Número de bits parametrizável
+    Port (
+        clk   : in  STD_LOGIC;
+        reset : in  STD_LOGIC;
+        D     : in  STD_LOGIC_VECTOR(N-1 downto 0);
+        Q     : out STD_LOGIC_VECTOR(N-1 downto 0)
+    );
+end RegN;
+
+architecture Behavioral of RegN is
+    signal reg_content : STD_LOGIC_VECTOR(N-1 downto 0);
+begin
+    process (clk, reset)
+    begin
+        if reset = '1' then
+            reg_content <= (others => '0');
+        elsif rising_edge(clk) then
+            reg_content <= D;
+        end if;
+    end process;
+    
+    Q <= reg_content;
+end Behavioral;

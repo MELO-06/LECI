@@ -1,0 +1,38 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity TimerTest is
+    Port (
+        clk        : in  STD_LOGIC;   -- clock de 50 MHz
+        trigger    : in  STD_LOGIC;   -- sinal de disparo
+        pulse_out  : out STD_LOGIC    -- saída: pulso de 200ns
+    );
+end TimerTest;
+
+architecture Behavioral of TimerTest is
+
+    -- Sinal de instância do temporizador
+    component delay_timer
+        generic (
+            PULSE_WIDTH_CYCLES : integer := 10  -- 200ns = 10 ciclos
+        );
+        Port (
+            clk       : in  STD_LOGIC;
+            trigger   : in  STD_LOGIC;
+            pulse_out : out STD_LOGIC
+        );
+    end component;
+
+begin
+
+    timer_inst : delay_timer
+        generic map (
+            PULSE_WIDTH_CYCLES => 10
+        )
+        port map (
+            clk       => clk,
+            trigger   => trigger,
+            pulse_out => pulse_out
+        );
+
+end Behavioral;

@@ -1,0 +1,35 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity FreqDivider_Demo is
+port(
+    CLOCK_50 : in std_logic;
+    LEDR     : out std_logic_vector(17 downto 0) -- Support multiple LEDs
+);
+end FreqDivider_Demo;
+
+architecture Behavioral of FreqDivider_Demo is
+    component FreqDivider
+        port(
+            clkIn  : in std_logic;
+            k      : in std_logic_vector(31 downto 0);
+            clkOut : out std_logic
+        );
+    end component;
+    
+    signal s_clkOut : std_logic;
+    constant k_value : std_logic_vector(31 downto 0) := x"017D7840"; -- 25,000,000
+    
+begin
+    
+    U1: FreqDivider port map (
+        clkIn  => CLOCK_50,
+        k      => k_value,
+        clkOut => s_clkOut
+    );
+    
+    LEDR(0) <= s_clkOut;
+    
+end Behavioral;
